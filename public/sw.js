@@ -1,9 +1,4 @@
 
-const addResourcesToCache = async (resources) => {
-  const cache = await caches.open("v1");
-  await cache.addAll(resources);
-};
-
 const toCache = [
   '_next/static/chunks/698-d3628749fb7230e8.js',
   '_next/static/chunks/app/layout-b9bff60c688c5e94.js',
@@ -19,6 +14,11 @@ const toCache = [
   'vercel.svg',
   '/'
 ]
+
+const addResourcesToCache = async (resources) => {
+  const cache = await caches.open("v1");
+  await cache.addAll(toCache);
+};
 
 self.addEventListener("install", (event) => {
   console.log('installed');
