@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 import { useEffect } from 'react'
 const ServiceWorkerRegister = () => {
   useEffect(() => {
@@ -25,7 +26,10 @@ const ServiceWorkerRegister = () => {
   };
 
   return (
-    <></>
+    <div className='bg-slate-600 py-4 flex'>
+      <Link href={'/users'} className='mx-2'>Users</Link>
+      <Link href={'/posts'} className='mx-2'>Posts</Link>
+    </div>
   )
 }
 

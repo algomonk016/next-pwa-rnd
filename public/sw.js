@@ -12,7 +12,9 @@ const toCache = [
   'manifest.json',
   'next.svg',
   'vercel.svg',
-  '/'
+  '/',
+  '/users',
+  '/posts'
 ]
 
 const addResourcesToCache = async (resources) => {

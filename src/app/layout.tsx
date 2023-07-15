@@ -1,7 +1,8 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import ServiceWorkerRegister from './ServiceWorkerRegister';
+import { ToastContainer } from 'react-toastify'
+import Navbar from './ServiceWorkerRegister';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -18,8 +19,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <ServiceWorkerRegister />
-      <body className={inter.className}>{children}</body>
+      <body className='bg-slate-500 text-slate-100'>
+        <Navbar />
+        {children}
+        <ToastContainer />
+      </body>
     </html>
   )
 }
